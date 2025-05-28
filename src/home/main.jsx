@@ -7,6 +7,7 @@ import serviceImage3 from "../assets/swipe3.svg";
 import serviceImage4 from "../assets/swipe4.svg";
 import serviceImage5 from "../assets/swipe1.svg";
 import serviceImage6 from "../assets/swipe2.svg";
+import image from "../assets/image.svg";
 
 const serviceData = [
   {
@@ -79,6 +80,68 @@ function Main() {
       stars: 5,
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.",
+    },
+  ];
+
+  const ArticleCard = ({ tag, author, title, description }) => {
+    return (
+      <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+        <div className="relative h-48 md:h-56">
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover"
+            draggable="false"
+          />
+          <span className="absolute top-4 left-4 bg-primary-pink text-white text-xs px-3 py-1 rounded-full font-medium">
+            {tag}
+          </span>
+        </div>
+
+        <div className="p-6 flex-grow flex flex-col">
+          <p className="text-sm text-gray-500 mb-2">{author}</p>
+          <h3 className="text-xl font-semibold text-gray-800 mb-3">{title}</h3>
+          <p className="text-base text-gray-600 leading-relaxed mb-6 flex-grow">
+            {description}
+          </p>
+          <a
+            href="#"
+            className="block w-full text-center bg-light-gray text-primary-pink py-3 rounded-lg font-medium transition-colors duration-200 hover:bg-gray-200 hover:text-pink-600"
+          >
+            Подробнее
+          </a>
+        </div>
+      </div>
+    );
+  };
+
+  const articles = [
+    {
+      image:
+        "https://via.placeholder.com/600x400/FFD700/000000?text=Абстракция+с+Бананами",
+      tag: "#Роспись стен",
+      author: "Артём Кукшинский",
+      title: "Простые рисунки на стену своими руками",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+    },
+    {
+      image:
+        "https://via.placeholder.com/600x400/FFD700/000000?text=Абстракция+с+Бананами",
+      tag: "#Роспись стен",
+      author: "Артём Кукшинский",
+      title: "Простые рисунки на стену своими руками",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+    },
+    {
+      image:
+        "https://via.placeholder.com/600x400/FFD700/000000?text=Абстракция+с+Бананами",
+      tag: "#Роспись стен",
+      author: "Артём Кукшинский",
+      title: "Простые рисунки на стену своими руками",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
     },
   ];
 
@@ -342,6 +405,23 @@ function Main() {
                 </svg>
               </button>
             </div>
+          </div>
+        </section>
+
+        <section className="container mx-auto px-4 py-16 md:py-20">
+          <div className="text-center mb-10 md:mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              Статьи
+            </h2>
+            <p className="text-sm md:text-base text-gray-600">
+              Наша деятельность / Советы / Лайфхаки / Идеи
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {articles.map((article, index) => (
+              <ArticleCard key={index} {...article} />
+            ))}
           </div>
         </section>
       </main>
