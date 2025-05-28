@@ -1,7 +1,40 @@
 import React from "react";
 import showcase1 from "../assets/showcase1.svg";
+import serviceImage1 from "../assets/swipe1.svg";
+import serviceImage2 from "../assets/swipe2.svg";
+import serviceImage3 from "../assets/swipe3.svg";
+import serviceImage4 from "../assets/swipe4.svg";
+import serviceImage5 from "../assets/swipe1.svg";
+import serviceImage6 from "../assets/swipe2.svg";
+const ServiceCard = ({ imageSrc, title }) => {
+  return (
+    <div
+      className="
+      bg-white rounded-xl shadow-md p-5 flex flex-col items-center text-center
+      transition-all duration-300 ease-in-out cursor-pointer
+      hover:shadow-lg hover:-translate-y-1 /* Hover effekti: soya va yuqoriga siljish */
+    "
+    >
+      <img
+        src={imageSrc}
+        alt={title}
+        className="w-full h-40 object-cover rounded-lg mb-4"
+      />
+      <h3 className="text-xl font-semibold text-gray-800">{title}</h3>{" "}
+    </div>
+  );
+};
 
 function Main() {
+  const serviceData = [
+    { image: serviceImage1, title: "Роспись стен в офисе" },
+    { image: serviceImage2, title: "Роспись стен в детской" },
+    { image: serviceImage3, title: "Роспись стен в квартире" },
+    { image: serviceImage4, title: "Граффити на стене" },
+    { image: serviceImage5, title: "Художественная роспись" },
+    { image: serviceImage6, title: "Дизайн интерьера" },
+  ];
+
   return (
     <div className="w-[100%]">
       <main>
@@ -38,6 +71,7 @@ function Main() {
             </div>
           </div>
         </div>
+
         <div className="w-full flex flex-col items-center justify-center py-16 px-4">
           <h2 className="text-2xl md:text-3xl font-semibold text-center mb-4">
             Мы - команда
@@ -79,6 +113,19 @@ function Main() {
                 />
                 {text.replace(/^(\d+|За \d+)(.*)/, "$2")}
               </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center justify-center bg-[#F9F9F9] pt-[50px] pb-[50px] gap-[30px] w-full">
+          <p className="text-[26px] font-[600] mb-5">Услуги</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+            {serviceData.map((service, index) => (
+              <ServiceCard
+                key={index}
+                imageSrc={service.image}
+                title={service.title}
+              />
             ))}
           </div>
         </div>
