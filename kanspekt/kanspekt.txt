@@ -1,0 +1,94 @@
+1. Type Aliases — type kalit so‘zi
+Type alias yordamida murakkab type-ni qisqacha nom bilan ifodalash mumkin.
+
+ts
+Copy
+Edit
+type User = {
+  name: string;
+  age: number;
+};
+
+const user1: User = {
+  name: "Ali",
+  age: 25,
+};
+Foydasi: Katta strukturalarni qayta-qayta yozmasdan ishlatish.
+
+2. Optional Properties — ? belgisi
+Ma’lumot obyektga berilishi shart bo‘lmagan property.
+
+ts
+Copy
+Edit
+type Product = {
+  name: string;
+  price: number;
+  description?: string; // optional
+};
+
+const item: Product = {
+  name: "Telefon",
+  price: 1500,
+};
+description kiritilmasa ham xatolik bo‘lmaydi.
+
+3. Readonly Properties
+Bu property-ni faqat o‘qish mumkin, o‘zgartirish mumkin emas.
+
+ts
+Copy
+Edit
+type Car = {
+  readonly model: string;
+  year: number;
+};
+
+const car: Car = {
+  model: "Malibu",
+  year: 2022,
+};
+
+// car.model = "Cobalt"; Xatolik: Readonly property
+Foydali joyi: ma’lumotlar o‘zgarmas bo‘lishi kerak bo‘lgan holatlarda.
+
+4. in operator (type guard)
+Obyektda muayyan property bor-yo‘qligini tekshirish.
+
+ts
+Copy
+Edit
+type Fish = { swim: () => void };
+type Bird = { fly: () => void };
+
+function move(animal: Fish | Bird) {
+  if ("swim" in animal) {
+    animal.swim();
+  } else {
+    animal.fly();
+  }
+}
+in operatori tur aniqlashda (type narrowing) ishlatiladi.
+
+5. Massivlarga Type berish
+Usul 1: type[] yozuvi
+ts
+Copy
+Edit
+let numbers: number[] = [1, 2, 3];
+let names: string[] = ["Ali", "Vali"];
+Usul 2: Array<type> yozuvi
+ts
+Copy
+Edit
+let ids: Array<number> = [10, 20, 30];
+Obyektlar massivi uchun:
+ts
+Copy
+Edit
+type User = { name: string; age: number };
+
+const users: User[] = [
+  { name: "Ali", age: 20 },
+  { name: "Vali", age: 25 },
+];
