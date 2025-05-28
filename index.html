@@ -1,13 +1,43 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + React</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary-pink': '#e91e63', // Rangni o'zingizning rasmga moslab qo'shimcha nom bilan qo'shamiz
+          },
+          // Padding values for precise matching
+          padding: {
+            '10': '40px', // p-10 (40px)
+            '8': '32px', // px-8 (32px)
+            '3.5': '14px', // py-3.5 (14px)
+            '9': '35px', // px-9 (35px)
+          },
+          fontSize: {
+            '3xl': '28px', // text-3xl (28px)
+            '4xl': '38px', // text-4xl (38px)
+          },
+          spacing: {
+            '25': '25px', // mb-25 (25px)
+            '30': '30px', // mb-30 (30px)
+            '40': '40px', // mb-40 (40px)
+          }
+        }
+      }
+    }
+  </script>
+</body>
+
 </html>

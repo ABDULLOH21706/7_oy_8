@@ -6,6 +6,25 @@ import serviceImage3 from "../assets/swipe3.svg";
 import serviceImage4 from "../assets/swipe4.svg";
 import serviceImage5 from "../assets/swipe1.svg";
 import serviceImage6 from "../assets/swipe2.svg";
+
+const serviceData = [
+  {
+    image: "https://via.placeholder.com/150/0000FF/FFFFFF?text=Service+1",
+    title: "Художественная роспись стен",
+  },
+  {
+    image: "https://via.placeholder.com/150/FF0000/FFFFFF?text=Service+2",
+    title: "Оформление интерьеров",
+  },
+  {
+    image: "https://via.placeholder.com/150/00FF00/FFFFFF?text=Service+3",
+    title: "Граффити и муралы",
+  },
+  {
+    image: "https://via.placeholder.com/150/FFFF00/000000?text=Service+4",
+    title: "Дизайн фасадов",
+  },
+];
 const ServiceCard = ({ imageSrc, title }) => {
   return (
     <div
@@ -127,6 +146,63 @@ function Main() {
                 title={service.title}
               />
             ))}
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center justify-center gap-[30px] pt-[50px] pb-[50px]">
+          <p className="text-[26px] font-[600]">Цена росписи стен</p>
+          <div className="flex items-center justify-center gap-[20px]">
+            <div class="card bg-white rounded-2xl p-10 shadow-lg text-center w-80 sm:w-[340px] flex flex-col items-center justify-center gap-[60px]">
+              <div className="flex flex-col items-center justify-center gap-[30px]">
+                <p class="text-[28px] font-medium text-gray-800">Просто</p>
+                <p>
+                  <span class="text-primary-pink text-[38px] font-bold">
+                    от 900 ₽
+                  </span>
+                  <span class="text-gray-600 text-lg ml-2">за м2</span>
+                </p>
+                <p class="text-gray-500 text-base">
+                  Геометрия, линии и роспись по скотчу
+                </p>
+              </div>
+              <button class="bg-white text-primary-pink border border-primary-pink py-3.5 px-9 rounded-full text-base font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-primary-pink hover:text-white focus:outline-none">
+                заказать
+              </button>
+            </div>
+            <div class="card bg-white rounded-2xl p-10 shadow-lg text-center w-80 sm:w-[340px] flex flex-col items-center justify-center gap-[60px]">
+              <div className="flex flex-col items-center justify-center gap-[30px]">
+                <p class="text-[28px] font-medium text-gray-800">Просто</p>
+                <p>
+                  <span class="text-primary-pink text-[38px] font-bold">
+                    от 900 ₽
+                  </span>
+                  <span class="text-gray-600 text-lg ml-2">за м2</span>
+                </p>
+                <p class="text-gray-500 text-base">
+                  Геометрия, линии и роспись по скотчу
+                </p>
+              </div>
+              <button class="bg-white text-primary-pink border border-primary-pink py-3.5 px-9 rounded-full text-base font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-primary-pink hover:text-white focus:outline-none">
+                заказать
+              </button>
+            </div>
+            <div class="card bg-white rounded-2xl p-10 shadow-lg text-center w-80 sm:w-[340px] flex flex-col items-center justify-center gap-[60px]">
+              <div className="flex flex-col items-center justify-center gap-[30px]">
+                <p class="text-[28px] font-medium text-gray-800">Просто</p>
+                <p>
+                  <span class="text-primary-pink text-[38px] font-bold">
+                    от 900 ₽
+                  </span>
+                  <span class="text-gray-600 text-lg ml-2">за м2</span>
+                </p>
+                <p class="text-gray-500 text-base">
+                  Геометрия, линии и роспись по скотчу
+                </p>
+              </div>
+              <button class="bg-white text-primary-pink border border-primary-pink py-3.5 px-9 rounded-full text-base font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-primary-pink hover:text-white focus:outline-none">
+                заказать
+              </button>
+            </div>
           </div>
         </div>
       </main>
