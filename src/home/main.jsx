@@ -1,4 +1,5 @@
 import React from "react";
+import "../index.css";
 import showcase1 from "../assets/showcase1.svg";
 import serviceImage1 from "../assets/swipe1.svg";
 import serviceImage2 from "../assets/swipe2.svg";
@@ -52,6 +53,33 @@ function Main() {
     { image: serviceImage4, title: "Граффити на стене" },
     { image: serviceImage5, title: "Художественная роспись" },
     { image: serviceImage6, title: "Дизайн интерьера" },
+  ];
+
+  const teamMembers = [
+    {
+      name: "Анна",
+      image:
+        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100&h=100",
+      stars: 5,
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown dummy text ever since the 1500s, when an unknown.",
+    },
+    {
+      name: "Анна",
+      image:
+        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100&h=100",
+      stars: 5,
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown dummy text ever since the 1500s, when an unknown.",
+    },
+    {
+      name: "Анна",
+      image:
+        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100&h=100",
+      stars: 5,
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.",
+    },
   ];
 
   return (
@@ -149,65 +177,175 @@ function Main() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-[30px] pt-[50px] pb-[50px]">
-          <p className="text-[26px] font-[600]">Цена росписи стен</p>
-          <div className="flex items-center justify-center gap-[20px]">
-            <div class="card bg-white rounded-2xl p-10 shadow-lg text-center w-80 sm:w-[340px] flex flex-col items-center justify-center gap-[60px]">
-              <div className="flex flex-col items-center justify-center gap-[30px]">
-                <p class="text-[28px] font-medium text-gray-800">Просто</p>
-                <p>
-                  <span class="text-primary-pink text-[38px] font-bold">
-                    от 900 ₽
-                  </span>
-                  <span class="text-gray-600 text-lg ml-2">за м2</span>
-                </p>
-                <p class="text-gray-500 text-base">
-                  Геометрия, линии и роспись по скотчу
-                </p>
+        <div className="flex items-center justify-center w-[100%]">
+          <div className="flex flex-col items-center justify-center gap-[30px] pt-[50px] pb-[50px] w-[50%]">
+            <p className="text-[26px] font-[600]">Цена росписи стен</p>
+            <div className="flex items-center justify-center gap-[20px]">
+              <div class="card bg-white rounded-2xl p-10 shadow-lg text-center w-80 sm:w-[340px] flex flex-col items-center justify-center gap-[60px]">
+                <div className="flex flex-col items-center justify-center gap-[30px]">
+                  <p class="text-[28px] font-medium text-gray-800">Просто</p>
+                  <p>
+                    <span class="text-primary-pink text-[38px] font-bold">
+                      от 900 ₽
+                    </span>
+                    <span class="text-gray-600 text-lg ml-2">за м2</span>
+                  </p>
+                  <p class="text-gray-500 text-base">
+                    Геометрия, линии и роспись по скотчу
+                  </p>
+                </div>
+                <button class="bg-white text-primary-pink border border-primary-pink py-3.5 px-9 rounded-full text-base font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-primary-pink hover:text-white focus:outline-none">
+                  заказать
+                </button>
               </div>
-              <button class="bg-white text-primary-pink border border-primary-pink py-3.5 px-9 rounded-full text-base font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-primary-pink hover:text-white focus:outline-none">
-                заказать
-              </button>
+              <div class="card bg-white rounded-2xl p-10 shadow-lg text-center w-80 sm:w-[340px] flex flex-col items-center justify-center gap-[60px]">
+                <div className="flex flex-col items-center justify-center gap-[30px]">
+                  <p class="text-[28px] font-medium text-gray-800">Просто</p>
+                  <p>
+                    <span class="text-primary-pink text-[38px] font-bold">
+                      от 900 ₽
+                    </span>
+                    <span class="text-gray-600 text-lg ml-2">за м2</span>
+                  </p>
+                  <p class="text-gray-500 text-base">
+                    Геометрия, линии и роспись по скотчу
+                  </p>
+                </div>
+                <button class="bg-white text-primary-pink border border-primary-pink py-3.5 px-9 rounded-full text-base font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-primary-pink hover:text-white focus:outline-none">
+                  заказать
+                </button>
+              </div>
+              <div class="card bg-white rounded-2xl p-10 shadow-lg text-center w-80 sm:w-[340px] flex flex-col items-center justify-center gap-[60px]">
+                <div className="flex flex-col items-center justify-center gap-[30px]">
+                  <p class="text-[28px] font-medium text-gray-800">Просто</p>
+                  <p>
+                    <span class="text-primary-pink text-[38px] font-bold">
+                      от 900 ₽
+                    </span>
+                    <span class="text-gray-600 text-lg ml-2">за м2</span>
+                  </p>
+                  <p class="text-gray-500 text-base">
+                    Геометрия, линии и роспись по скотчу
+                  </p>
+                </div>
+                <button class="bg-white text-primary-pink border border-primary-pink py-3.5 px-9 rounded-full text-base font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-primary-pink hover:text-white focus:outline-none">
+                  заказать
+                </button>
+              </div>
             </div>
-            <div class="card bg-white rounded-2xl p-10 shadow-lg text-center w-80 sm:w-[340px] flex flex-col items-center justify-center gap-[60px]">
-              <div className="flex flex-col items-center justify-center gap-[30px]">
-                <p class="text-[28px] font-medium text-gray-800">Просто</p>
-                <p>
-                  <span class="text-primary-pink text-[38px] font-bold">
-                    от 900 ₽
-                  </span>
-                  <span class="text-gray-600 text-lg ml-2">за м2</span>
-                </p>
-                <p class="text-gray-500 text-base">
-                  Геометрия, линии и роспись по скотчу
-                </p>
-              </div>
-              <button class="bg-white text-primary-pink border border-primary-pink py-3.5 px-9 rounded-full text-base font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-primary-pink hover:text-white focus:outline-none">
-                заказать
-              </button>
+            <p className="text-center text-[#787878] text-[13px] font-[400]">
+              Стоимость художественной росписи стен в Санкт-Петербурге
+              рассчитывается индивидуально. На цену влияет размер рисунка,
+              сложность, особенности поверхности и вид материалов. При заказе
+              большого объема мы делаем скидки. Если у вас ограниченный бюджет,
+              мы подстраиваемся и подбираем несложные рисунки. Стоимость
+              материалов всегда оплачивается отдельно. Также отдельно
+              оплачивается эскиз. Закажите роспись стен в спб у нас на сайте.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-center">
+          <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-2xl">
+            <div class="flex items-baseline mb-6 flex-wrap">
+              <h2 class="text-2xl font-semibold text-gray-800 leading-tight">
+                Заказать роспись стен
+              </h2>
+              <span class="text-sm text-pink-500 ml-2 whitespace-nowrap mt-1 md:mt-0">
+                *согласие на обработку персональных данных
+              </span>
             </div>
-            <div class="card bg-white rounded-2xl p-10 shadow-lg text-center w-80 sm:w-[340px] flex flex-col items-center justify-center gap-[60px]">
-              <div className="flex flex-col items-center justify-center gap-[30px]">
-                <p class="text-[28px] font-medium text-gray-800">Просто</p>
-                <p>
-                  <span class="text-primary-pink text-[38px] font-bold">
-                    от 900 ₽
-                  </span>
-                  <span class="text-gray-600 text-lg ml-2">за м2</span>
-                </p>
-                <p class="text-gray-500 text-base">
-                  Геометрия, линии и роспись по скотчу
-                </p>
-              </div>
-              <button class="bg-white text-primary-pink border border-primary-pink py-3.5 px-9 rounded-full text-base font-semibold cursor-pointer transition-all duration-300 ease-in-out hover:bg-primary-pink hover:text-white focus:outline-none">
+            <div class="flex flex-col md:flex-row items-stretch md:items-center gap-4">
+              <input
+                type="tel"
+                class="flex-grow p-3 rounded-lg border border-gray-300 bg-white text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                placeholder="0 (000) 000-00-00"
+              />
+              <button class="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-6 rounded-lg whitespace-nowrap transition-colors duration-200">
                 заказать
               </button>
             </div>
           </div>
         </div>
+
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-center text-3xl md:text-4xl font-bold text-gray-800 mb-12">
+              Мы - команда
+            </h2>
+
+            <div className="relative">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+                {teamMembers.map((member, index) => (
+                  <div
+                    key={index}
+                    className="flex w-full max-w-sm bg-pink-100 rounded-xl shadow-md overflow-hidden"
+                  >
+                    <div className="w-4 bg-pink-500 flex-shrink-0"></div>
+                    <div className="p-6 flex flex-col items-center text-center flex-grow">
+                      <div className="w-24 h-24 bg-white rounded-lg overflow-hidden flex items-center justify-center mb-4">
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                        {member.name}
+                      </h3>
+                      <div className="flex justify-center gap-1 mb-4">
+                        {Array.from({ length: member.stars }).map((_, i) => (
+                          <span key={i} className="text-pink-500 text-xl">
+                            &#9733;
+                          </span>
+                        ))}
+                      </div>
+                      <p className="text-sm text-gray-700 leading-relaxed text-left">
+                        {member.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <button className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md cursor-pointer focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50 z-10">
+                <svg
+                  className="w-5 h-5 text-pink-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+
+              <button className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md cursor-pointer focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50 z-10">
+                <svg
+                  className="w-5 h-5 text-pink-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
 }
-
 export default Main;
